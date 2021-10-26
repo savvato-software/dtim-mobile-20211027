@@ -1,0 +1,7 @@
+{
+  "name": "dtim-techprofile-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

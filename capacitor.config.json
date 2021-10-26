@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "dtim-techprofile-mobile",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
