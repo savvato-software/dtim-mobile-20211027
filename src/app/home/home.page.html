@@ -1,20 +1,21 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <div class="ion-padding">
+    <ion-row>
+      <ion-col>
+        <img class="centered" src="assets/img/dtim-bannner.jpg" (click)="onBannerClick()"/>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button class="centered" [disabled]="!isSessionActive()" (click)="onNewUserBtnClicked()">I'm New Here</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="centered" [disabled]="!isSessionActive()" (click)="onReturningUserBtnClicked()">I'm Back For More!</ion-button>
+      </ion-col>
+    </ion-row>
+    <br/><br/><br/>
+    <span class="centered home-admin-warning" [hidden]="isSessionActive()">ADMIN, THE MEETING SESSION HAS NOT STARTED!</span>
+    <ion-button [hidden]="isAdminBtnHidden()" class="centered" (click)="onAdminBtnClicked()">I'm the Admin!</ion-button>
   </div>
 </ion-content>
